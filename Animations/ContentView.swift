@@ -12,7 +12,7 @@ struct ContentView: View {
     
     var body: some View {
         Button("Tap Me") {
-            animationAmount += 0.25
+            animationAmount += 1
         }
         .padding(50)
         .background(Color.red)
