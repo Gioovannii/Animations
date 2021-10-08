@@ -18,13 +18,12 @@ struct ContentView: View {
         .background(Color.red)
         .foregroundColor(.white)
         .clipShape(Circle())
-        .scaleEffect(animationAmount)
-//        .blur(radius: (animationAmount - 1) * 3)
-//        .animation(.interpolatingSpring(stiffness: 50, damping: 1))
-        .animation(
-            Animation.easeInOut(duration: 2)
-                .delay(1)
-        )
+        .overlay(
+            Circle()
+                    .stroke(Color.red)
+                    .scaleEffect(animationAmount)
+                    .opacity(Double(2 - animationAmount))
+   
         
     }
 }
