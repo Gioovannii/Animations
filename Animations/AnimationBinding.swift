@@ -11,7 +11,13 @@ struct AnimationBinding: View {
     @State private var animationAmount: CGFloat = 1
     
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+        print(animationAmount)
+        
+        return VStack {
+            Stepper("Scale amount", value: $animationAmount.animation(), in: 1 ... 10)
+                padding()
+            
+        
     }
 }
 
