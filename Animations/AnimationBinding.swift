@@ -14,13 +14,13 @@ struct AnimationBinding: View {
         print(animationAmount)
         
         return VStack {
-            Stepper("Scale amount", value: $animationAmount.animation(), in: 1 ... 10)
-                padding()
+            Stepper("Scale amount", value: $animationAmount.animation(), in: 1...10)
+                .padding()
             
             Spacer()
             
             Button("Tap Me") {
-                animationAmount += 1
+                self.animationAmount += 1
             }
             .padding(40)
             .background(Color.red)
