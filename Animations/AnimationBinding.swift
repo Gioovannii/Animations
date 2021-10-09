@@ -17,7 +17,12 @@ struct AnimationBinding: View {
             Stepper("Scale amount", value: $animationAmount.animation(), in: 1 ... 10)
                 padding()
             
-        
+            Spacer()
+            
+            Button("Tap Me") {
+                animationAmount += 1
+            }
+           
     }
 }
 
