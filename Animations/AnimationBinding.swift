@@ -22,7 +22,12 @@ struct AnimationBinding: View {
             Button("Tap Me") {
                 animationAmount += 1
             }
-           
+            .padding(40)
+            .background(Color.red)
+            .foregroundColor(.white)
+            .clipShape(Circle())
+            .scaleEffect(animationAmount)
+        }
     }
 }
 
