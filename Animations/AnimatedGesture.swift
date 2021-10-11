@@ -16,15 +16,15 @@ struct AnimatedGesture: View {
             .clipShape(RoundedRectangle(cornerRadius: 10))
             .offset(dragAmount)
             .gesture(
-            DragGesture()
-            .onChanged { dragAmount = $0.translation }
-                .onEnded { _ in
-                    withAnimation(.spring()) {
-                        dragAmount = .zero
+                DragGesture()
+                    .onChanged { dragAmount = $0.translation }
+                    .onEnded { _ in
+                        withAnimation(.spring()) {
+                            dragAmount = .zero
+                        }
                     }
-                }
             )
-//            .animation(.spring())
+        //            .animation(.spring())
         
         
     }
@@ -33,6 +33,5 @@ struct AnimatedGesture: View {
 struct AnimatedGesture_Previews: PreviewProvider {
     static var previews: some View {
         AnimatedGesture()
-            .previewLayout(.sizeThatFits)
     }
 }
